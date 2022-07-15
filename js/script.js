@@ -1,6 +1,6 @@
 
 const app = new Vue({
-    name: boolzap,
+    name: 'boolzap',
     el: '#root',
     data: {
         user: {

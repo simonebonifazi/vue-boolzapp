@@ -20,46 +20,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="debug">
     <div class="container" id="root">
         <div class="row">
             <section id="contacts-aside" class="col-4">
                 <div class="user d-flex justify-content-between">
                    <div>
-                       <img src="#" alt="#"> <span> Nome Utente</span>  
+                       <img src="img/avatar_io.jpg" alt="my-profile-pic"> <span> Nome Utente</span>  
                     </div>
-                    <div>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-                </div>
-                <div class="quit-notification d-flex">
-                    <i>campanella rotta</i>
-                    <div>
-                        <p>
-                            Ricevi notifiche di nuovi messaggi
-                        </p>
-                        <p> attiva notifiche desktop </p>
+                    <div  class="d-flex align-items-center">
+                        <i class="fa-solid fa-arrows-rotate mx-2"></i>
+                        <i class="fa-solid fa-message mx-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
                     </div>
                 </div>
-
-                <input type="text" class="seraching-message" placeholder="Cerca o inizia una nuova chat">
-                    <i></i>
+                <div class="quit-notification d-flex align-items-center">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="px-2">
+                        <span> <strong>   Ricevi notifiche di nuovi messaggi </strong> </span>
+                        <span class="text-muted"> <u> Attiva notifiche desktop </u> </span>
+                    </div>
+                </div>
+                <div class="seraching-message" >
                     
+                    <i class="fa-solid fa-magnifying-glass"></i>   
+                    <input type="text"  placeholder="Cerca o inizia una nuova chat">
                 </input>
+            </div>
                 <div id="contacts">
-                    <div class="single-chat-contact">Michele</div>
-                    <div class="single-chat-contact">Fabio</div>
-                    <div class="single-chat-contact">Samuele</div>
-                    <div class="single-chat-contact">Luisa</div>
+                    <div class="single-chat-contact"> <img src="#" alt="#"> Michele </div>
+                    <div class="single-chat-contact"> <img src="#" alt="#"> Fabio </div>
+                    <div class="single-chat-contact"> <img src="#" alt="#"> Samuele </div>
+                    <div class="single-chat-contact"> <img src="#" alt="#"> Luisa </div>
                 </div>
                 
             </section>
             <section id="main-chat" class="col-8 d-flex flex-column justify-content-between" >
                 <header class="user d-flex justify-content-between">
                    <div class="d-flex">
-                       <img src="#" alt="#">
+                       <img src="img/avatar_5.jpg" alt="michele-pic">
                         <div> 
                            <p>Michele</p>
                             <span> Ultimo accesso alle</span>  
