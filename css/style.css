@@ -1,0 +1,15 @@
+/* layout blocchettoni */
+div {
+    min-height: 70px;
+    border: 1px dashed black;
+}
+
+section {
+    min-height: 700px;
+    border: 1px dashed green;
+}
+
+body {
+    padding: 2vh 10vh;
+    background-image: linear-gradient(#009688 100px, #DADBD3 100px);
+}

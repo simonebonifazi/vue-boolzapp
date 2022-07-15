@@ -21,7 +21,65 @@
 </head>
 
 <body>
-    <div id="root">
+    <div class="container" id="root">
+        <div class="row">
+            <section id="contacts-aside" class="col-4">
+                <div class="user d-flex justify-content-between">
+                   <div>
+                       <img src="#" alt="#"> <span> Nome Utente</span>  
+                    </div>
+                    <div>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="quit-notification d-flex">
+                    <i>campanella rotta</i>
+                    <div>
+                        <p>
+                            Ricevi notifiche di nuovi messaggi
+                        </p>
+                        <p> attiva notifiche desktop </p>
+                    </div>
+                </div>
+
+                <input type="text" class="seraching-message" placeholder="Cerca o inizia una nuova chat">
+                    <i></i>
+                    
+                </input>
+                <div id="contacts">
+                    <div class="single-chat-contact">Michele</div>
+                    <div class="single-chat-contact">Fabio</div>
+                    <div class="single-chat-contact">Samuele</div>
+                    <div class="single-chat-contact">Luisa</div>
+                </div>
+                
+            </section>
+            <section id="main-chat" class="col-8 d-flex flex-column justify-content-between" >
+                <header class="user d-flex justify-content-between">
+                   <div class="d-flex">
+                       <img src="#" alt="#">
+                        <div> 
+                           <p>Michele</p>
+                            <span> Ultimo accesso alle</span>  
+                        </div>
+                    </div>
+                    <div>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </header>
+                <div class="chat"> </div>
+
+                <footer>
+                    <i></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i></i>
+                </footer>
+            </section>
+        </div>
 
     </div>
     <!-- JavaScript -->

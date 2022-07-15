@@ -1,6 +1,6 @@
-console.log('vue ok', Vue)
 
 const app = new Vue({
+    name: boolzap,
     el: '#root',
     data: {
         user: {
