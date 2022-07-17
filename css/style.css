@@ -45,11 +45,12 @@ header {
 }
 
 #quit-notification .fa-solid {
-    color: #8EDAFC;
     border-radius: 50%;
+
+    color: #8EDAFC;
     background-color: #F2FBFF;
+
     padding: 15px;
-    height: 50%;
 
 }
 
