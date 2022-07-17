@@ -42,13 +42,13 @@ header {
 /* fa-solid */
 .fa-solid {
     color: #B1B1B1;
+    font-size: 20px;
 }
 
+#main-chat footer .fa-solid {
 
-/* notifiche */
-.quit-notification {
-    background-color: #8EDAFC;
-    padding: 10px;
+    font-size: 30px;
+    margin: 10px;
 }
 
 #contacts-aside .quit-notification .fa-solid {
@@ -60,6 +60,14 @@ header {
 
 }
 
+/* left side */
+/* notification */
+.quit-notification {
+    background-color: #8EDAFC;
+    padding: 10px;
+}
+
+/* search message */
 #contacts-aside .searching-messages {
     position: relative;
     height: 55px;
@@ -79,6 +87,7 @@ header {
     width: 95%;
 }
 
+
 /* main chat */
 #main-chat .chat {
     background-image: url("../img/mine.jpg");
@@ -89,10 +98,6 @@ header {
     background-color: #F3EEEA;
 }
 
-#main-chat footer .fa-solid {
-
-    font-size: x-large;
-}
 
 #main-chat footer input {
     width: 90%;
