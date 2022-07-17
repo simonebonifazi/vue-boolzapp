@@ -58,17 +58,18 @@ header {
 #quit-notification {
     background-color: #8EDAFC;
     padding: 10px;
+
 }
 
 /* search message */
-#contacts-aside .searching-messages {
+#searching-messages {
     position: relative;
     height: 55px;
 }
 
 #contacts-aside .fa-magnifying-glass {
     position: absolute;
-    top: 42.5%;
+    top: 56.5%;
     left: 15px;
     transform: translateY(-50%);
 }
@@ -82,7 +83,8 @@ header {
 
 
 /* main chat */
-#main-chat .chat {
+
+#chat {
     background-image: url("../img/mine.jpg");
 }
 
@@ -97,31 +99,31 @@ header {
 }
 
 /* messages */
-.chat .message-container {
+#chat .message-container {
     display: flex;
 
 }
 
-.chat time {
+#chat time {
     font-size: 10px;
     text-align: right;
     color: #D4CCCE;
 }
 
-.chat .message-container.sent {
+#chat .message-container.sent {
     justify-content: flex-end;
 
 }
 
-.chat .message-container.sent .message {
+#chat .message-container.sent .message {
     background-color: #D5F9BA;
 }
 
 
-.chat .message-container.received {
+#chat .message-container.received {
     justify-content: flex-start;
 }
 
-.chat .message-container.received .message {
+#chat .message-container.received .message {
     background-color: #fff;
 }
