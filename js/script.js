@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#root',
     data: {
         currentIndex: 0,
+        newMessage: '',
         user: {
             name: 'Nome Utente',
             avatar: '_io'
