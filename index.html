@@ -58,7 +58,7 @@
                 <!-- contact-list -->
                 <section id="contacts" class="overflow-auto mt-2">
                     <ul class="list-group">
-                        <li v-for="contact in contacts" class="rounded-0 single-chat-contact list-group-item"> 
+                        <li v-for="(contact, index) in contacts" @click="openChat(index)"  class="rounded-0 single-chat-contact list-group-item"> 
                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"> {{contact.name}} 
                         </li>
                     </ul>
@@ -71,10 +71,10 @@
                     <!--mini card  -->
                     <div class="d-flex">
                        <!-- image  -->
-                       <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" alt="michele-pic">
+                       <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" :alt="contacts[currentIndex].name">
                        <!-- description -->
                        <div class="px-2 pt-2">
-                           <p class="m-0"> <strong>   Michele </strong> </p>
+                           <p class="m-0"> <strong v-text="contacts[currentIndex].name"></strong> </p>
                            <span class="text-muted">Ultimo accesso oggi alle </span>
                         </div>
                     </div>
