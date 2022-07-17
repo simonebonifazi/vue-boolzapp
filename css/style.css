@@ -1,14 +1,3 @@
-/* layout blocchettoni */
-.debug div {
-    min-height: 70px;
-    border: 1px dashed black;
-}
-
-.debug section {
-    min-height: 700px;
-    border: 1px dashed green;
-}
-
 body {
     height: 100vh;
     padding: 30px;
@@ -24,8 +13,9 @@ img {
     padding: 8px;
 }
 
-#contacts li {
-    border-radius: 0;
+#contacts li,
+u {
+    cursor: pointer;
 }
 
 /* side section */
@@ -43,15 +33,18 @@ header {
 .fa-solid {
     color: #B1B1B1;
     font-size: 20px;
+
+    cursor: pointer;
 }
 
 #main-chat footer .fa-solid {
+    cursor: pointer;
 
     font-size: 30px;
     margin: 10px;
 }
 
-#contacts-aside .quit-notification .fa-solid {
+#quit-notification .fa-solid {
     color: #8EDAFC;
     border-radius: 50%;
     background-color: #F2FBFF;
@@ -62,7 +55,7 @@ header {
 
 /* left side */
 /* notification */
-.quit-notification {
+#quit-notification {
     background-color: #8EDAFC;
     padding: 10px;
 }
