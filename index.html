@@ -58,7 +58,9 @@
                 <!-- contact-list -->
                 <section id="contacts" class="overflow-auto mt-2">
                     <ul class="list-group">
-                        <li v-for="contact in contacts" class="rounded-0 single-chat-contact list-group-item"> <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"> {{contact.name}} </li>
+                        <li v-for="contact in contacts" class="rounded-0 single-chat-contact list-group-item"> 
+                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"> {{contact.name}} 
+                        </li>
                     </ul>
                 </section>
             </section>
@@ -69,7 +71,7 @@
                     <!--mini card  -->
                     <div class="d-flex">
                        <!-- image  -->
-                       <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt="michele-pic">
+                       <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" alt="michele-pic">
                        <!-- description -->
                        <div class="px-2 pt-2">
                            <p class="m-0"> <strong>   Michele </strong> </p>
@@ -89,38 +91,15 @@
                 <section id="chat" class="flex-grow-1 overflow-auto">
                   <!-- messages list -->
                     <ul class="p-0">
-                        <!-- message container -->
-                        <li class="message-container sent">
+
+                        <li v-for="(message, i) in contacts[currentIndex].messages" :class="  message.status === 'sent' ? 'message-container sent' : 'message-container received'">
                             <!-- message -->
                             <div class="m-3 p-2 rounded-3 message"> 
-                                <p class="m-0" >
-                                    Dove stai?
+                                <p class="m-0" v-text="message.text">
                                 </p>
-                                <time datetime="2022-01-14 12:00" > 2022-02-14 00:00</time>
+                                <time datetime="2022-01-14 12:00" v-text="message.date"></time>
                             </div>    
                             
-                        </li>
-                        <!-- message container -->
-                        <li class="message-container sent">
-                            <!-- message -->
-                            <div class="m-3 p-2 rounded-3 message sent"> 
-                                <p class="m-0">
-                                    Rientra a casa che è tardi
-                                </p>
-                                <time datetime="2022-01-14 12:00" >  2022-02-14 00:15</time>
-                            </div>    
-                            
-                        </li>
-                        <!-- message container -->
-                        <li class="message-container received">
-                            <!-- message -->
-                            <div class="m-3 p-2 rounded-3 message received"> 
-                                <p class="m-0">
-                                    Sono in camera, non sono mai uscito!
-                                </p>
-                                <time datetime="2022-01-14 12:00" > 2022-02-14 01:35</time>
-                            </div>   
-
                         </li>
                     </ul>
 
