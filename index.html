@@ -58,7 +58,7 @@
                 <!-- contact-list -->
                 <section id="contacts" class="overflow-auto mt-2">
                     <ul class="list-group">
-                        <li class="rounded-0 single-chat-contact list-group-item"> <img src="img/avatar_1.jpg" alt="Michele"> Michele </li>
+                        <li v-for="contact in contacts" class="rounded-0 single-chat-contact list-group-item"> <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"> {{contact.name}} </li>
                     </ul>
                 </section>
             </section>
