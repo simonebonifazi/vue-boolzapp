@@ -101,6 +101,9 @@ const app = new Vue({
     methods: {
         openChat(index) {
             this.currentIndex = index;
+        },
+        sendNewMessage() {
+            this.contacts.push({ date: this.date, text: this.newMessage, status: 'sent' })
         }
     }
 })
