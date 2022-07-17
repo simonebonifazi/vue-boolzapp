@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         currentIndex: 0,
         newMessage: '',
+        checkMessage: 'ok',
         user: {
             name: 'Nome Utente',
             avatar: '_io'
@@ -106,6 +107,12 @@ const app = new Vue({
             this.contacts[i].messages.push({ date: '20/03/2020 16:38:55', text: this.newMessage, status: 'sent' });
             this.newMessage = ''
 
+        },
+        delayedAnswer(i) {
+            setTimeout(() => {
+                this.contacts[i].messages.push({ date: '20/03/2020 16:38:56', text: this.checkMessage, status: 'received' })
+            },
+                1050)
         }
     }
 })
