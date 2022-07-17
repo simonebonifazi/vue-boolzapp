@@ -99,7 +99,7 @@ const app = new Vue({
     },
     methods: {
         openChat(index) {
-            this.currentIndex === index;
+            this.currentIndex = index;
         }
     }
 })
