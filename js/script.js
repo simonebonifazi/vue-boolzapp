@@ -102,8 +102,10 @@ const app = new Vue({
         openChat(index) {
             this.currentIndex = index;
         },
-        sendNewMessage() {
-            this.contacts.push({ date: this.date, text: this.newMessage, status: 'sent' })
+        sendNewMessage(i) {
+            this.contacts[i].messages.push({ date: '20/03/2020 16:38:55', text: this.newMessage, status: 'sent' });
+            this.newMessage = ''
+
         }
     }
 })
