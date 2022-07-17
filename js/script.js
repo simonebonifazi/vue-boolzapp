@@ -6,6 +6,7 @@ const app = new Vue({
         currentIndex: 0,
         newMessage: '',
         checkMessage: 'ok',
+        searchMessage: '',
         user: {
             name: 'Nome Utente',
             avatar: '_io'
@@ -97,7 +98,12 @@ const app = new Vue({
         ]
     },
     computed: {
-
+        searchResult: function () {
+            const results = this.contacts.filter(contact => {
+                return contact.name.includes(this.searchMessage)
+            })
+            return results
+        }
     },
     methods: {
         openChat(index) {
@@ -112,7 +118,7 @@ const app = new Vue({
             setTimeout(() => {
                 this.contacts[i].messages.push({ date: '20/03/2020 16:38:56', text: this.checkMessage, status: 'received' })
             },
-                1050)
+                1050);
         }
     }
 })
