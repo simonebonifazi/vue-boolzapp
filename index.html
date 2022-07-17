@@ -31,7 +31,7 @@
                 <header class=" flex-shrink-0 d-flex justify-content-between ">
                     <!-- immagine  utente -->
                    <figure class="m-0">
-                       <img src="img/avatar_io.jpg" alt="my-profile-pic"> <span> Nome Utente</span>  
+                       <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name"> <span> {{user.name}}</span>  
                     </figure>
                     <!-- fonts -->
                     <div  class="d-flex align-items-center">
@@ -69,7 +69,7 @@
                     <!--mini card  -->
                     <div class="d-flex">
                        <!-- image  -->
-                       <img src="img/avatar_5.jpg" alt="michele-pic">
+                       <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt="michele-pic">
                        <!-- description -->
                        <div class="px-2 pt-2">
                            <p class="m-0"> <strong>   Michele </strong> </p>
