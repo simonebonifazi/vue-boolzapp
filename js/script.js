@@ -109,16 +109,27 @@ const app = new Vue({
         openChat(index) {
             this.currentIndex = index;
         },
-        sendNewMessage(i) {
+        addMessage(text, status) {
+            this.contacts[this.currentIndex].messages.push(
+                {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: text,
+                    status: status
+                });
+        },
+        sendNewMessage() {
             //verifico che non inserisca una stringa vuota
             if (!this.newMessage) return
-            this.contacts[i].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.newMessage, status: 'sent' });
+
+            this.addMessage(this.newMessage, 'sent')
+
             this.newMessage = ''
 
         },
-        delayedAnswer(i) {
+        defaultAnswer() {
             setTimeout(() => {
-                this.contacts[i].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.checkMessage, status: 'received' })
+
+                this.addMessage('ok', 'received')
             },
                 1050);
         }

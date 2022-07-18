@@ -112,7 +112,7 @@
                 <!-- footer -->
                 <footer class="flex-shrink-0 d-flex justify-content-around align-items-center">
                     <i class="fa-solid fa-face-smile"></i>
-                    <input v-model.trim="newMessage" type="text" @keyup.enter="sendNewMessage(currentIndex), delayedAnswer(currentIndex)" placeholder="Scrivi un messaggio">
+                    <input v-model.trim="newMessage" type="text" @keyup.enter="sendNewMessage(), defaultAnswer()" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </footer>
             
