@@ -97,7 +97,7 @@
                   <!-- messages list -->
                     <ul class="p-0">
 
-                        <li v-for="(message, i) in contacts[currentIndex].messages" :class="  message.status === 'sent' ? 'message-container sent' : 'message-container received'">
+                        <li v-for="(message, i) in contacts[currentIndex].messages" :class=" 'message-container ' + message.status">
                             <!-- message -->
                             <div class="m-3 p-2 rounded-3 message"> 
                                 <p class="m-0" v-text="message.text">
@@ -112,7 +112,7 @@
                 <!-- footer -->
                 <footer class="flex-shrink-0 d-flex justify-content-around align-items-center">
                     <i class="fa-solid fa-face-smile"></i>
-                    <input v-model="newMessage" type="text" @keyup.enter="sendNewMessage(currentIndex), delayedAnswer(currentIndex)" placeholder="Scrivi un messaggio">
+                    <input v-model.trim="newMessage" type="text" @keyup.enter="sendNewMessage(currentIndex), delayedAnswer(currentIndex)" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </footer>
             
