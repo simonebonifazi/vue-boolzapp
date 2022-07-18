@@ -98,11 +98,11 @@ const app = new Vue({
         ]
     },
     computed: {
-        searchResult: function () {
-            const results = this.contacts.filter(contact => {
-                return contact.name.includes(this.searchMessage)
-            })
-            return results
+        filteredContacts: function () {
+            return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.searchMessage.toLowerCase())
+            });
+
         }
     },
     methods: {
@@ -121,15 +121,15 @@ const app = new Vue({
             //verifico che non inserisca una stringa vuota
             if (!this.newMessage) return
 
-            this.addMessage(this.newMessage, 'sent')
+            this.addMessage(this.newMessage, 'sent');
 
-            this.newMessage = ''
+            this.newMessage = '';
 
         },
         defaultAnswer() {
             setTimeout(() => {
 
-                this.addMessage('ok', 'received')
+                this.addMessage('ok', 'received');
             },
                 1050);
         }
