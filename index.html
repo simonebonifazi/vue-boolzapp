@@ -13,7 +13,12 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css'
         integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=='
         crossorigin='anonymous' />
-    <!-- VUE -->
+
+    <!-- Day JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <!-- custom parse format -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/plugin/customParseFormat.js"></script>
+    <!-- VUE JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
 
     <!--nostro stile -->
@@ -52,13 +57,13 @@
                 <!-- searching panel -->
                 <section id="searching-messages" class=" flex-shrink-0  pt-3" >
                     <i class="fa-solid fa-magnifying-glass"></i>   
-                    <input v-model="searchMessage"  type="text"  placeholder="Cerca o inizia una nuova chat"/> 
+                    <input v-model="searchMessage" @key-up="searchResult" type="text"  placeholder="Cerca o inizia una nuova chat"/> 
                 </section >
                 
                 <!-- contact-list -->
                 <section id="contacts" class="overflow-auto mt-2">
                     <ul class="list-group">
-                        <li v-for="(contact, index) in contacts" @click="openChat(index)"  class="rounded-0 single-chat-contact list-group-item"> 
+                        <li v-for="(contact, index) in contacts" @click="openChat(index)" class="rounded-0 single-chat-contact list-group-item"> 
                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"> {{contact.name}} 
                         </li>
                     </ul>
