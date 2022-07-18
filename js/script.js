@@ -110,13 +110,15 @@ const app = new Vue({
             this.currentIndex = index;
         },
         sendNewMessage(i) {
-            this.contacts[i].messages.push({ date: '20/03/2020 16:38:55', text: this.newMessage, status: 'sent' });
+            //verifico che non inserisca una stringa vuota
+            if (!this.newMessage) return
+            this.contacts[i].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.newMessage, status: 'sent' });
             this.newMessage = ''
 
         },
         delayedAnswer(i) {
             setTimeout(() => {
-                this.contacts[i].messages.push({ date: '20/03/2020 16:38:56', text: this.checkMessage, status: 'received' })
+                this.contacts[i].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.checkMessage, status: 'received' })
             },
                 1050);
         }
