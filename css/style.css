@@ -18,6 +18,8 @@ u {
     cursor: pointer;
 }
 
+
+
 /* side section */
 #contacts-aside {
     background-color: #fff;
@@ -97,6 +99,19 @@ header {
 
 #main-chat footer input {
     width: 90%;
+}
+
+/* message */
+.message {
+    position: relative;
+}
+
+#chat li .fa-solid {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+
+    font-size: 13px;
 }
 
 /* messages */
